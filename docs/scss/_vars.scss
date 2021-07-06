@@ -1,0 +1,81 @@
+$default: #436372;
+$white: #fff;
+$title: #243f4d;
+$subtitle: #414141;
+$suptitle: #191919;
+$contacttitle: #1f2044;
+$text: #585858;
+$subtext: #8b8b8b;
+$suptext: #a3bbc8;
+$infotext: #262626;
+$infosubtext: #222933;
+$contacttext: #7b7b7b;
+$contactlink: #234969;
+
+$header: #fcd7b6;
+$bot-hed: #fef7f0;
+$poduct: #f8f8f8;
+
+%dmsans-400{
+  font-family: 'DMSans-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%dmsans-500{
+  font-family: 'DMSans-Medium', sans-serif;
+  font-weight: 500;
+}
+
+%dmsans-700{
+  font-family: 'DMSans-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%poppins-700{
+  font-family: 'Poppins-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%rubik-400{
+  font-family: 'Rubik-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%rubik-500{
+  font-family: 'Rubik-Medium', sans-serif;
+  font-weight: 600;
+}
+
+%rubik-700{
+  font-family: 'Rubik-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%btn{
+  background-color: $suptext;
+  color: #fff;
+  @extend %dmsans-400;
+  padding: 8px 17px;
+  cursor: pointer;
+  border: none;
+}
+
+%checkbox-hidden,
+%radio-hidden{
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+
+
+
+
