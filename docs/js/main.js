@@ -151,4 +151,47 @@ $(function () {
 
   var mixer1 = mixitup(filter__1, config);
   var mixer2 = mixitup(filter__2, config);
-})
+
+
+//   var mixitup = require('mixitup');
+//   var mixitupMultifilter = require('../path/to/mixitup-multifilter');
+
+//   mixitup.use(mixitupMultifilter);
+
+//   require([
+//     'mixitup',
+//     '../path/to/mixitup-multifilter'
+//   ], function (
+//     mixitup, mixitupMultifilter) {
+//     mixitup.use(mixitupMultifilter);
+//   });
+
+//   var mixer = mixitup(containerEl, {
+//     multifilter: {
+//       enable: true
+//     }
+//   });
+
+
+});
+
+$(document).ready(function () {
+  $("#filter").keyup(function () {
+
+    // Retrieve the input field text and reset the count to zero
+    var filter = $(this).val(), count = 0;
+
+    // Loop through the comment list
+    $(".elastic div div h5").each(function () {
+      if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+        $(this).parents('.elastic div').fadeOut()
+      } else {
+        $(this).parents('.elastic div').show()
+        count++;
+      }
+    });
+    // Update the count
+    var numberItems = count;
+    $("#filter-count").text("Number of Filter = " + count);
+  });
+});

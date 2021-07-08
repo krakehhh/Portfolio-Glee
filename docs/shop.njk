@@ -26,5 +26,28 @@
   {% include 'docs/module/_footer/_footer.html' %}
 
   <script src="js/main.min.js"></script>
+  <script>
+    var containerEl = document.querySelector('.shop__inner');
+
+    var mixer = mixitup(containerEl, {
+      multifilter: {
+        enable: true
+      },
+      animation: {
+        effects: 'fade translateZ(-100px)'
+      },
+      callbacks: {
+        onMixStart: function () {
+          $('.products__no-found').fadeOut(200);
+        },
+        onMixFail: function () {
+          $('.products__no-found').fadeIn(200);
+        }
+      },
+      load: {
+        sort: 'published-date:desc'
+      }
+    });
+  </script>
 </body>
 </html>

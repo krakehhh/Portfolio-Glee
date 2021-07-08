@@ -1,3 +1,13 @@
+.products__no-found {
+	display: none;
+  margin: 0 auto;
+}
+
+.hide{
+  display: none;
+}
+
+
 .irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single,
 .irs--flat .irs-min, .irs--flat .irs-max,
 .irs--flat .irs-handle>i:first-child{
@@ -74,6 +84,39 @@
 .filter{
   &__item{
     margin-bottom: 70px;
+    border: none;
+  }
+  &__search{
+    min-width: 100%;
+    margin-right: 30px;
+  }
+  &__search-item{
+    min-width: 100%;
+    margin-bottom: 30px;
+    border: none;
+    padding: 0;
+  }
+  &__search-input{
+    padding: 5px;
+    width: calc(100% - 28px);
+    margin: 0 14px;
+  }
+  &__inner-btn{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  &__btn{
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 43px;
+    border-radius: 5px;
+    color: #243f4d;
+    background-color: #edf1f4;
+    width: calc(100% - 28px);
+    margin: 0 14px 3px;
   }
   &__title{
     display: inline-block;
